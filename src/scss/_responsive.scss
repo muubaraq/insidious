@@ -1,0 +1,72 @@
+.loading {
+  height: 100vh;
+  @include flexCC;
+  img {
+    width: 90%;
+    animation: bounce 4s linear infinite;
+  }
+}
+
+@keyframes bounce {
+  from {
+    left: 0px;
+    top: 0px;
+  }
+
+  to {
+    left: 0px;
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 389px) {
+  .sidebar .buttons {
+    bottom: 3rem;
+    button {
+      padding: 0.7rem;
+      margin: 0.5rem;
+    }
+  }
+}
+
+@include for-phone-only {
+  .content-container {
+    margin-top: 4.2rem;
+  }
+}
+
+@include for-tablet-potrait-up {
+  .content-container {
+    margin-top: 4.2rem;
+  }
+}
+
+@include for-desktop-up {
+  .content-container {
+    width: 75%;
+    position: absolute;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .loading {
+    height: 100vh;
+    @include flexCC;
+    img {
+      width: 40%;
+      animation: bounce 4s linear infinite;
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      left: 0px;
+      top: 0px;
+    }
+
+    to {
+      left: 0px;
+      top: 20px;
+    }
+  }
+}

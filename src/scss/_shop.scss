@@ -1,0 +1,130 @@
+.shop {
+  .section-title {
+    padding: 2rem;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    .icon {
+      font-size: 2rem;
+    }
+  }
+
+  main {
+    display: flex;
+    height: 100%;
+  }
+  .games {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding-left: 0rem;
+    padding-top: 3rem;
+    .item {
+      position: relative;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 20.31%,
+          rgba(0, 0, 0, 0.7) 82.81%
+        );
+      }
+      &:hover h3 {
+        color: $secondaryColor;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      h3 {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        color: #ffffff;
+        z-index: 2;
+      }
+    }
+  }
+
+  .filters {
+    width: 20%;
+    height: 100%;
+    padding-left: 2rem;
+    h4 {
+      margin-top: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .layout-1,
+    .layout-2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 1rem;
+      p {
+        margin-bottom: 0;
+        margin: 1rem 0;
+        cursor: pointer;
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+
+      .icon {
+        color: #d9d9d9;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .games {
+    margin: auto;
+  }
+}
+
+@include for-tablet-potrait-up {
+  .shop {
+    .section-title {
+      padding: 2rem;
+    }
+    .games {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 1rem;
+      .item {
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@include for-desktop-up {
+  .shop {
+    .section-title {
+      padding: 2rem;
+    }
+    .games {
+      width: 80%;
+      .item {
+        height: 40vh;
+        h3 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
