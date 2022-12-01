@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+#  The station project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal project as a final test of my skills by  ALX as a Software Enginee
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- View the optimal layout for the site depending on their device's screen size
+- See the latest updates of games
+- Able to read complete details of a selected game
+- Have a community to share thoughts
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Source Code: [](https://github.com/muubaraq/insidious)
+- Live Site URL: [](https://insidious-games.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
+Create some rough designs. Before i get into the website creation process, it helps to have the basic layout and visual style worked out. Creating these sketches can range from drawing them on a napkin to creating mockups in Photoshop. Create a flowchart to show how the basic navigation of the site will work.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Styled Components](https://styled-components.com/) - For styles
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```html
+ <section className='header'>
+          <div className='hero-container'>
+            <div className='text'>
+              <p>
+                Play amazing game and connect with all your friends all at once.
+              </p>
+            </div>
+          </div>
+          <div className='grid-container'>
+            <div className='grid-item'>
+              <p>Games for all platforms</p>
+              <img src={gamepad} alt='gamepad' />
+            </div>
+            <div className='grid-item'>
+              <p>Amazing community of gamers</p>
+              <img src={community} alt='gamepad' />
+            </div>
+            <div className='grid-item'>
+              <p>Top notch customer service</p>
+              <img src={serviceShield} alt='gamepad' />
+            </div>
+          </div>
+        </section>
+```
+```css
+.grid-container {
+  position: absolute;
+  bottom: 100px;
+  left: 5%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 90%;
+  margin: 4rem auto;
 
-### Code Splitting
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    p {
+      text-align: center;
+      font-size: 1.4rem;
+      width: 90%;
+      margin-bottom: 0.3rem;
+    }
+  }
+}
 
-### Analyzing the Bundle Size
+```
+```js
+import React, { useEffect } from "react";
+import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
+import { BiPlusCircle } from "react-icons/bi";
+import { RiEqualizerLine } from "react-icons/ri";
+import { myGames } from "../data";
+import { useGlobalContext } from "../components/Context"; proudOfThisFunc = () => {
+  console.log('🎉')
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Twitter - [@muubaraq](https://www.twitter.com/muubaraq)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+ I will like to show appreciation to Austin Tonayam. He has been a great help, time and again. 
