@@ -1,3 +1,4 @@
+// imports contents and components
 import React, { useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import gamepad from "../images/gamepad.png";
@@ -75,6 +76,7 @@ const About = () => {
             </div>
           </div>
         </section>
+
         <section className='about-info'>
           <article className='aritcle-one'>
             <div className='text'>
