@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Source Code: [](https://github.com/muubaraq/insidious)
-- Live Site URL: [](https://insidious-games.netlify.app/)
+- Source Code: [source code](https://github.com/muubaraq/insidious)
+- Live Site URL: [live url](https://insidious-games.netlify.app/)
 
 ## My process
 Create some rough designs. Before i get into the website creation process, it helps to have the basic layout and visual style worked out. Creating these sketches can range from drawing them on a napkin to creating mockups in Photoshop. Create a flowchart to show how the basic navigation of the site will work.
@@ -115,6 +115,7 @@ import { useGlobalContext } from "../components/Context"; proudOfThisFunc = () =
 ## Author
 
 - Twitter - [@muubaraq](https://www.twitter.com/muubaraq)
+- LinkedIn - [mubaraq](https://www.linkedin.com/in/mubaraq-a-a20b1518b/)
 
 
 ## Acknowledgments
