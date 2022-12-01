@@ -1,3 +1,4 @@
+//
 import React, { useState, useEffect } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { questions } from "../data";
